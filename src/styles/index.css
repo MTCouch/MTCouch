@@ -1,0 +1,11 @@
+body{
+    background: var(--fundo);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1,h2,h3,p{
+    color: var(--font-color);
+    font-family: 'League Spartan', sans-serif;
+}
