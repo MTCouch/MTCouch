@@ -4,6 +4,10 @@ body{
     width: 100%;
 }
 
+h1, h2, h3, p{
+    font-family: 'League Spartan', sans-serif;
+}
+
 .parent {
     display: grid;
     grid-template-columns: repeat(7, 1fr);

@@ -2,6 +2,7 @@ body{
     background: var(--fundo);
     height: 100%;
     width: 100%;
+    color: var(--font-color);
 }
 
 .parent {
@@ -28,3 +29,6 @@ body{
     grid-column-start: 7;
 }
         
+h1, h2, h3, p{
+    font-family: 'League Spartan', sans-serif;
+}
