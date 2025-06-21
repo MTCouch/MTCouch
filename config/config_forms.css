@@ -1,0 +1,30 @@
+body{
+    background: var(--fundo);
+    height: 100%;
+    width: 100%;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+    
+
+.div2 {
+    grid-column-start: 4;
+}
+
+.div3 {
+    grid-column-start: 5;
+}
+
+.div4 {
+    grid-column-start: 6;
+}
+
+.div5 {
+    grid-column-start: 7;
+}
+        

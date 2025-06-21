@@ -1,3 +1,8 @@
+body{
+    background: var(--fundo);
+    height: 100%;
+    width: 100%;
+}
 
 .parent {
     display: grid;

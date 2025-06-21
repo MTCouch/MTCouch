@@ -1,10 +1,3 @@
-body{
-    background: var(--fundo);
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-}
-
 p{
     color: antiquewhite;
 }
