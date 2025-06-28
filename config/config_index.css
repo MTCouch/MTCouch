@@ -9,11 +9,30 @@ h1, h2, h3, p{
     font-family: 'League Spartan', sans-serif;
 }
 
+.div2, .div3, .div4, .div5 {
+    width: 200px;
+    height: 50px;
+
+    text-align: center;
+    background: none;
+    border-radius: 100px;
+    outline: none;
+    box-shadow: none;
+    border: 2px solid var(--verde-secundario);
+}
+
+.a{
+    color: antiquewhite;
+    font-size: xx-large;
+    text-decoration: none;
+}
+
 .parent {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(8, 1fr);
     gap: 8px;
+    margin-top: 10px;
 }
     
 
