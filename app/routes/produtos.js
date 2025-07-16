@@ -75,4 +75,18 @@ module.exports = function(app){
             response.redirect('/produtos');
         });
     });
+
+
+    // LOGIN
+
+    app.get('/produtos/login', function(request, response){
+    response.render('produtos/login.ejs', {errosValidacao: {}, produto: {}});
+    });
+
+    // MENU
+
+    app.get('/produtos/menu', function(request, response){
+    response.render('produtos/menu.ejs', {errosValidacao: {}, produto: {}});
+    });
+
 }
