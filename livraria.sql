@@ -35,3 +35,16 @@ CREATE TABLE IF NOT EXISTS `produtos` (
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
+
+-- Inserir produtos na tabela produtos
+INSERT INTO `produtos` (`titulo`, `descricao`, `preco`) VALUES
+('O Pequeno Príncipe', 'Livro clássico de Antoine de Saint-Exupéry', 29.90),
+('1984', 'Romance distópico de George Orwell', 39.50),
+('Dom Casmurro', 'Obra de Machado de Assis', 24.99),
+('A Revolução dos Bichos', 'Fábula política de George Orwell', 27.80),
+('Harry Potter e a Pedra Filosofal', 'Fantasia de J.K. Rowling', 45.00),
+('O Hobbit', 'Fantasia de J.R.R. Tolkien', 49.90),
+('A Arte da Guerra', 'Estratégia militar de Sun Tzu', 19.90),
+('O Alquimista', 'Livro de Paulo Coelho', 34.20),
+('Capitães da Areia', 'Romance de Jorge Amado', 28.50),
+('A Menina que Roubava Livros', 'Ficção de Markus Zusak', 41.75);

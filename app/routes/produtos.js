@@ -87,4 +87,9 @@ module.exports = function(app){
     response.render('produtos/menu.ejs', {errosValidacao: {}, produto: {}});
     });
 
+    // LISTA BANCO USUARIOS
+    app.get('/produtos/lista', function(request, response){
+    response.render('produtos/lista.ejs', {errosValidacao: {}, produto: {}});
+    });
+
 }
