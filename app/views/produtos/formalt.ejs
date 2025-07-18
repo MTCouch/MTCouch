@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Alteração de Produtos</title>
+    <title>Form Alteração de usuarios</title>
 </head>
 
 <body>
-    <%if(typeof produto[0] == "undefined"){%>
+    <%if(typeof usuarios[0] == "undefined"){%>
     <div class="erros">
         <%if(errosValidacao){%>
             <ul>
@@ -20,42 +20,31 @@
     </div>
     <form action="/alteracao" method="POST">
         <div>
-            <input type="text" id="id" name="id" value="<%=produto.id%>"/>
+            <input type="text" id="id" name="id" value="<%=usuarios.id%>"/>
         </div>
         <div>
-            <label for="titulo">Titulo:</label>
-            <input type="text" id="titulo" name="titulo" value="<%=produto.titulo%>" placeholder="Coloque o titulo do produto aqui" />
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" value="<%=usuarios[0].nome%>" placeholder="Coloque o nome do usuario aqui" />
         </div>
         <div>
-            <label for="preco">Preço:</label>
-            <input type="text" id="preco" name="preco" value="<%=produto.preco%>" placeholder="Coloque o preço do produto aqui" />
+            <label for="senha">Senha:</label>
+            <input type="text" id="preco" name="senha" value="<%=usuarios[0].senha%>" placeholder="Coloque o senha do usuario aqui" />
         </div>
-        <div>
-            <label for="descricao">Descrição:</label>
-            <textarea rows="10" cols="20" id="descricao" name="descricao"
-                placeholder="Coloque a descrição do livro"><%=produto.descricao%></textarea>
-
-        </div>
+        
         <input type="submit" value="alterar"/>
     </form>
     <%} else {%>
         <form action="/alteracao" method="POST">
             <div>
-                <input type="text" id="id" name="id" value="<%=produto[0].id%>"/>
+                <input type="text" id="id" name="id" value="<%=usuarios[0].id%>"/>
             </div>
             <div>
-                <label for="titulo">Titulo:</label>
-                <input type="text" id="titulo" name="titulo" value="<%=produto[0].titulo%>" placeholder="Coloque o titulo do produto aqui" />
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" value="<%=usuarios[0].nome%>" placeholder="Coloque o nome do usuario aqui" />
             </div>
             <div>
-                <label for="preco">Preço:</label>
-                <input type="text" id="preco" name="preco" value="<%=produto[0].preco%>" placeholder="Coloque o preço do produto aqui" />
-            </div>
-            <div>
-                <label for="descricao">Descrição:</label>
-                <textarea rows="10" cols="20" id="descricao" name="descricao"
-                    placeholder="Coloque a descrição do livro"><%=produto[0].descricao%></textarea>
-    
+                <label for="senha">Senha:</label>
+                <input type="text" id="preco" name="senha" value="<%=usuarios[0].senha%>" placeholder="Coloque o senha do usuario aqui" />
             </div>
             <input type="submit" value="alterar"/>
         </form>

@@ -14,17 +14,15 @@
     <table border="1px">
         <tr>
             <th>ID</th>
-            <th>Titulo</th>
-            <th>Descrição</th>
-            <th>Preço</th>
+            <th>Nome</th>
+            <th>Senha</th>
             <th colspan="2" class="centralizar">Opções</th>
         </tr>
         <% for(var i = 0; i<lista.length; i++) {%>
         <tr>
             <td><%=lista[i].id%></td>
-            <td><%=lista[i].titulo%></td>
-            <td><%=lista[i].descricao%></td>
-            <td><%=lista[i].preco%></td>
+            <td><%=lista[i].nome%></td>
+            <td><%=lista[i].senha%></td>
             <td class="centralizar"><a href="/editar/<%=lista[i].id%>">ALTERAR</a></td>
             <td class="centralizar"><a href="/delete/<%=lista[i].id%>"
                 onclick="return confirmarExcluir()">EXCLUIR</a></td>

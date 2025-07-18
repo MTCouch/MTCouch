@@ -15,16 +15,15 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Copiando estrutura do banco de dados para livraria
-CREATE DATABASE IF NOT EXISTS `livraria` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `livraria`;
+-- Copiando estrutura do banco de dados para BDusuarios
+CREATE DATABASE IF NOT EXISTS `BDusuarios` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `BDusuarios`;
 
--- Copiando estrutura para tabela livraria.produtos
-CREATE TABLE IF NOT EXISTS `produtos` (
+-- Copiando estrutura para tabela BDusuarios.usuarios
+CREATE TABLE IF NOT EXISTS `usuarios` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `titulo` varchar(50) DEFAULT NULL,
-  `descricao` varchar(100) DEFAULT NULL,
-  `preco` decimal(10,2) DEFAULT NULL,
+  `nome` varchar(50) DEFAULT NULL,
+  `senha` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -36,15 +35,15 @@ CREATE TABLE IF NOT EXISTS `produtos` (
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
 
--- Inserir produtos na tabela produtos
-INSERT INTO `produtos` (`titulo`, `descricao`, `preco`) VALUES
-('O Pequeno Príncipe', 'Livro clássico de Antoine de Saint-Exupéry', 29.90),
-('1984', 'Romance distópico de George Orwell', 39.50),
-('Dom Casmurro', 'Obra de Machado de Assis', 24.99),
-('A Revolução dos Bichos', 'Fábula política de George Orwell', 27.80),
-('Harry Potter e a Pedra Filosofal', 'Fantasia de J.K. Rowling', 45.00),
-('O Hobbit', 'Fantasia de J.R.R. Tolkien', 49.90),
-('A Arte da Guerra', 'Estratégia militar de Sun Tzu', 19.90),
-('O Alquimista', 'Livro de Paulo Coelho', 34.20),
-('Capitães da Areia', 'Romance de Jorge Amado', 28.50),
-('A Menina que Roubava Livros', 'Ficção de Markus Zusak', 41.75);
+/* Usuarios  */
+INSERT INTO `usuarios` (`nome`, `senha`) VALUES
+('Ana Paula', 'ana123'),
+('Carlos Henrique', 'carlos456'),
+('Mariana Souza', 'mari2025'),
+('João Pedro', 'joao789'),
+('Fernanda Lima', 'fern@321'),
+('Rafael Silva', 'rafa1234'),
+('Bruna Costa', 'bruna567'),
+('Lucas Oliveira', 'lucas2024'),
+('Juliana Mendes', 'jujusenha'),
+('Gabriel Rocha', 'gabriel!1');

@@ -3,7 +3,7 @@ var mysql = require('mysql');
 var connectMYSQL = function(){
     return mysql.createConnection({
         host: 'localhost',
-        database: 'livraria',
+        database: 'BDusuarios',
         user: 'root',
         password: ''
     });

@@ -2,9 +2,9 @@ module.exports = function(app){
     var listaProdutos = function(request, response){
 
         var connection =  app.infra.connectionFactory();
-        var produtosDAO = new app.infra.ProdutosDAO(connection);
+        var usuariosDAO = new app.infra.UsuariosDAO(connection);
 
-        produtosDAO.lista(function(err, results){
+        usuariosDAO.lista(function(err, results){
             response.render('produtos/lista.ejs',{lista:results});
         });
         connection.end();
@@ -20,8 +20,7 @@ module.exports = function(app){
         var produto = request.body;
 
         request.assert('titulo', 'Título é obrigatório!').notEmpty();
-        request.assert('descricao', 'Descrição é obrigatória!').notEmpty();
-        request.assert('preco', 'Preço é obrigatório!').isFloat();
+        request.assert('senha', 'senha é obrigatória!').notEmpty();
 
         var erros = request.validationErrors();
         if(erros){
@@ -30,8 +29,8 @@ module.exports = function(app){
         }
 
         var connection = app.infra.connectionFactory();
-        var produtosDAO = new app.infra.ProdutosDAO(connection);
-        produtosDAO.salva(produto, function(err, results){
+        var usuariosDAO = new app.infra.UsuariosDAO(connection);
+        usuariosDAO.salva(produto, function(err, results){
             response.redirect('/produtos');
         });
     });
@@ -40,8 +39,8 @@ module.exports = function(app){
         var id = request.params.id;
 
         var connection = app.infra.connectionFactory();
-        var produtosDAO = new app.infra.ProdutosDAO(connection);
-        produtosDAO.apagar(id, function(err, results){
+        var usuariosDAO = new app.infra.UsuariosDAO(connection);
+        usuariosDAO.apagar(id, function(err, results){
             response.redirect('/produtos');
         });
     });
@@ -50,8 +49,8 @@ module.exports = function(app){
         var id = request.params.id;
 
         var connection = app.infra.connectionFactory();
-        var produtosDAO = new app.infra.ProdutosDAO(connection);
-        produtosDAO.buscar(id, function(err, results){
+        var usuariosDAO = new app.infra.UsuariosDAO(connection);
+        usuariosDAO.buscar(id, function(err, results){
             response.render('produtos/formalt.ejs', {errosValidacao: {}, produto: results});
         });
     });
@@ -60,8 +59,7 @@ module.exports = function(app){
         var produto = request.body;
 
         request.assert('titulo', 'Título é obrigatório!').notEmpty();
-        request.assert('descricao', 'Descrição é obrigatória!').notEmpty();
-        request.assert('preco', 'Preço é obrigatório!').isFloat();
+        request.assert('senha', 'Senha é obrigatória!').notEmpty();
 
         var erros = request.validationErrors();
         if(erros){
@@ -70,8 +68,8 @@ module.exports = function(app){
         }
 
         var connection = app.infra.connectionFactory();
-        var produtosDAO = new app.infra.ProdutosDAO(connection);
-        produtosDAO.salvaalt(produto, function(err, results){
+        var usuariosDAO = new app.infra.UsuariosDAO(connection);
+        usuariosDAO.salvaalt(produto, function(err, results){
             response.redirect('/produtos');
         });
     });
